@@ -6,14 +6,125 @@
 <body>
     <h2>Car Prediction Form</h2>
     <form id="predictionForm">
-        <label>MAKE: <input type="text" name="MAKE" required></label><br>
-        <label>MODEL: <input type="text" name="MODEL" required></label><br>
-        <label>VEHICLE_CLASS: <input type="text" name="VEHICLE_CLASS" required></label><br>
+
+        
+        <label>MAKE:
+            <select name="MAKE" required>
+                <option value="">Select</option>
+                <option value="ACURA">ACURA</option>
+                <option value="AUDI">AUDI</option>
+                <option value="BMW">BMW</option>
+                <option value="BUICK">BUICK</option>
+                <option value="CADILLAC">CADILLAC</option>
+                <option value="CHEVROLET">CHEVROLET</option>
+                <option value="CHRYSLER">CHRYSLER</option>
+                <option value="DAEWOO">DAEWOO</option>
+                <option value="DODGE">DODGE</option>
+                <option value="FERRARI">FERRARI</option>
+                <option value="FORD">FORD</option>
+                <option value="GMC">GMC</option>
+                <option value="HONDA">HONDA</option>
+                <option value="HYUNDAI">HYUNDAI</option>
+                <option value="INFINITI">INFINITI</option>
+                <option value="ISUZU">ISUZU</option>
+                <option value="JAGUAR">JAGUAR</option>
+                <option value="JEEP">JEEP</option>
+                <option value="KIA">KIA</option>
+                <option value="LAND ROVER">LAND ROVER</option>
+                <option value="LEXUS">LEXUS</option>
+                <option value="LINCOLN">LINCOLN</option>
+                <option value="MAZDA">MAZDA</option>
+                <option value="MERCEDES-BENZ">MERCEDES-BENZ</option>
+                <option value="NISSAN">NISSAN</option>
+                <option value="OLDSMOBILE">OLDSMOBILE</option>
+                <option value="PLYMOUTH">PLYMOUTH</option>
+                <option value="PONTIAC">PONTIAC</option>
+                <option value="PORSCHE">PORSCHE</option>
+                <option value="SAAB">SAAB</option>
+                <option value="SATURN">SATURN</option>
+                <option value="SUBARU">SUBARU</option>
+                <option value="SUZUKI">SUZUKI</option>
+                <option value="TOYOTA">TOYOTA</option>
+                <option value="VOLKSWAGEN">VOLKSWAGEN</option>
+                <option value="VOLVO">VOLVO</option>
+            </select>
+        </label><br>
+
+        
+        <label>MODEL:
+            <select name="MODEL" required>
+                <option value="">Select</option>
+                <option value="1.6EL">1.6EL</option>
+                <option value="3.2TL">3.2TL</option>
+                <option value="3.5RL">3.5RL</option>
+                <option value="INTEGRA">INTEGRA</option>
+                <option value="INTEGRA GSR/TYPE R">INTEGRA GSR/TYPE R</option>
+                <option value="NSX">NSX</option>
+                <option value="A4">A4</option>
+                <option value="A4 QUATTRO">A4 QUATTRO</option>
+                <option value="A6">A6</option>
+                <option value="A6 AVANT QUATTRO">A6 AVANT QUATTRO</option>
+                <option value="A6 QUATTRO">A6 QUATTRO</option>
+                <option value="A8 QUATTRO">A8 QUATTRO</option>
+                <option value="S4 QUATTRO">S4 QUATTRO</option>
+                <option value="TT COUPE QUATTRO">TT COUPE QUATTRO</option>
+                
+            </select>
+        </label><br>
+
+        
+        <label>VEHICLE_CLASS:
+            <select name="VEHICLE_CLASS" required>
+                <option value="">Select</option>
+                <option value="COMPACT">COMPACT</option>
+                <option value="MID-SIZE">MID-SIZE</option>
+                <option value="SUBCOMPACT">SUBCOMPACT</option>
+                <option value="STATION WAGON - MID-SIZE">STATION WAGON - MID-SIZE</option>
+                <option value="MINICOMPACT">MINICOMPACT</option>
+                <option value="TWO-SEATER">TWO-SEATER</option>
+                <option value="STATION WAGON - SMALL">STATION WAGON - SMALL</option>
+                <option value="FULL-SIZE">FULL-SIZE</option>
+                <option value="SUV">SUV</option>
+                <option value="VAN - CARGO">VAN - CARGO</option>
+                <option value="VAN - PASSENGER">VAN - PASSENGER</option>
+                <option value="PICKUP TRUCK - STANDARD">PICKUP TRUCK - STANDARD</option>
+                <option value="PICKUP TRUCK - SMALL">PICKUP TRUCK - SMALL</option>
+                <option value="MINIVAN">MINIVAN</option>
+            </select>
+        </label><br>
+
+    
+        <label>TRANSMISSION:
+            <select name="TRANSMISSION" required>
+                <option value="">Select</option>
+                <option value="A4">A4</option>
+                <option value="M5">M5</option>
+                <option value="AS5">AS5</option>
+                <option value="AS4">AS4</option>
+                <option value="M6">M6</option>
+                <option value="A5">A5</option>
+                <option value="A3">A3</option>
+                <option value="AS6">AS6</option>
+            </select>
+        </label><br>
+
+        
+        <label>FUEL:
+            <select name="FUEL" required>
+                <option value="">Select</option>
+                <option value="X">X</option>
+                <option value="Z">Z</option>
+                <option value="E">E</option>
+                <option value="N">N</option>
+                <option value="D">D</option>
+            </select>
+        </label><br>
+
+        
         <label>ENGINE_SIZE: <input type="number" step="0.1" name="ENGINE_SIZE" required></label><br>
         <label>CYLINDERS: <input type="number" name="CYLINDERS" required></label><br>
-        <label>TRANSMISSION: <input type="text" name="TRANSMISSION" required></label><br>
-        <label>FUEL_CONSUMPTION: <input type="number" step="0.1" name="FUEL_CONSUMPTION" required></label><br>
-        <label>FUEL: <input type="text" name="FUEL" required></label><br><br>
+        <label>FUEL_CONSUMPTION: <input type="number" step="0.1" name="FUEL_CONSUMPTION" required></label><br><br>
+
         <button type="submit">Predict</button>
     </form>
 
@@ -51,3 +162,5 @@
     </script>
 </body>
 </html>
+
+            
