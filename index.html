@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Car Prediction</title>
+</head>
+<body>
+    <h2>Car Prediction Form</h2>
+    <form id="predictionForm">
+        <label>MAKE: <input type="text" name="MAKE" required></label><br>
+        <label>MODEL: <input type="text" name="MODEL" required></label><br>
+        <label>VEHICLE_CLASS: <input type="text" name="VEHICLE_CLASS" required></label><br>
+        <label>ENGINE_SIZE: <input type="number" step="0.1" name="ENGINE_SIZE" required></label><br>
+        <label>CYLINDERS: <input type="number" name="CYLINDERS" required></label><br>
+        <label>TRANSMISSION: <input type="text" name="TRANSMISSION" required></label><br>
+        <label>FUEL_CONSUMPTION: <input type="number" step="0.1" name="FUEL_CONSUMPTION" required></label><br>
+        <label>FUEL: <input type="text" name="FUEL" required></label><br><br>
+        <button type="submit">Predict</button>
+    </form>
+
+    <h3>Prediction Result:</h3>
+    <div id="result"></div>
+
+    <script>
+        const form = document.getElementById('predictionForm');
+        const resultDiv = document.getElementById('result');
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const formData = new FormData(form);
+            const features = {};
+            formData.forEach((value, key) => features[key] = isNaN(value) ? value : parseFloat(value));
+
+            try {
+                const response = await fetch('/predict', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({features})
+                });
+
+                const data = await response.json();
+                if(data.error) {
+                    resultDiv.textContent = "Error: " + data.error;
+                } else {
+                    resultDiv.textContent = "Prediction: " + data.prediction;
+                }
+            } catch (err) {
+                resultDiv.textContent = "Request failed: " + err;
+            }
+        });
+    </script>
+</body>
+</html>
